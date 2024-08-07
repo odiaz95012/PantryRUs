@@ -105,8 +105,8 @@ function ChildModal(props: Props) {
         const fileExtension = file.name.split('.').pop(); // Get file extension
 
         const s3 = new AWS.S3({
-            accessKeyId: 'AKIAUADVGEK76NIEZUYP',
-            secretAccessKey: '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',
+            accessKeyId: process.env.AWS_ACCESS_KEY,
+            secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
             region: 'us-west-1',
           });
       
